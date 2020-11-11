@@ -4,6 +4,7 @@ module.exports = {
     dest: './build', // 设置输出目录
     port: 8888, // 端口
     themeConfig: {   // 主题配置
+        // extend: '@vuepress/theme-default',
         logo: '/logo.png',
         smoothScroll: true,
         nav: [
@@ -20,7 +21,7 @@ module.exports = {
         // 为以下路由添加侧边栏
         sidebar: {
             '/zh/components/': getComponentSidebar('组件'),
-            '/zh/guide/': getGuideSidebar('安装', '快速上手'),
+            '/zh/guide/': getGuideSidebar('开发指南', '设计原则'),
         }
 
     },
@@ -39,12 +40,12 @@ function getGuideSidebar(groupA, groupB) {
             title: groupB,
             collapsable: false,
             children: [
-                'basic-config',
+                'guide-design',
             ]
         }
     ]
 }
-function getComponentSidebar(groupA, introductionA) {
+function getComponentSidebar(groupA) {
     return [
         {
             title: groupA,

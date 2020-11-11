@@ -1,64 +1,117 @@
-# 快速上手
+## 快速上手
 
-::: warning 前提条件
-dying-ui 需要 [Node.js](https://nodejs.org/en/) >= 8.6
-:::
+本节将介绍如何在项目中使用 dying-ui。
 
-本文会帮助你从头搭建一个简单的 VuePress 文档。如果你想在一个现有项目中使用 VuePress 管理文档，从步骤 3 开始。
+### 使用 vue-cli@3
 
-1. 创建并进入一个新目录
+基于 vue-cli 做了相应的适配功能，你可以用它们快速地搭建一个基于 dying-ui 的项目。
 
-   ``` bash
-   mkdir vuepress-starter && cd vuepress-starter
-   ```
+### 引入 dying-ui
 
-2. 使用你喜欢的包管理器进行初始化
+你可以引入整个 dying，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 dying。
 
-   ``` bash
-   yarn init # npm init
-   ```
+#### 完整引入
 
-3. 将 VuePress 安装为本地依赖
+在 main.js 中写入以下内容：
 
-   我们已经不再推荐全局安装 VuePress
+```javascript
+import Vue from "vue";
+import dyUi from "dying-ui";
+import "dying-ui/dist/dying-ui.css";
+import App from "./App.vue";
 
-   ``` bash
-   yarn add -D vuepress # npm install -D vuepress
-   ```
+Vue.use(dyUi);
 
-   ::: warning 注意
-   如果你的现有项目依赖了 webpack 3.x，我们推荐使用 [Yarn](https://classic.yarnpkg.com/zh-Hans/) 而不是 npm 来安装 VuePress。因为在这种情形下，npm 会生成错误的依赖树。
-   :::
+new Vue({
+  el: "#app",
+  render: (h) => h(App),
+});
+```
 
-4. 创建你的第一篇文档
+以上代码便完成了 dying-ui 的引入。需要注意的是，样式文件需要单独引入。
 
-   ``` bash
-   mkdir docs && echo '# Hello VuePress' > docs/README.md
-   ```
+#### 按需引入
 
-5. 在 `package.json` 中添加一些 [scripts](https://classic.yarnpkg.com/zh-Hans/docs/package-json#toc-scripts)
+借助 [babel-plugin-component](https://github.com/QingWei-Li/babel-plugin-component)，我们可以只引入需要的组件，以达到减小项目体积的目的。
 
-   这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。
+首先，安装 babel-plugin-component：
 
-   ``` json
-   {
-     "scripts": {
-       "docs:dev": "vuepress dev docs",
-       "docs:build": "vuepress build docs"
-     }
-   }
-   ```
+```bash
+npm install babel-plugin-component -D
+```
 
-6. 在本地启动服务器
+然后，将 .babelrc 修改为：
 
-   ``` bash
-   yarn docs:dev # npm run docs:dev
-   ```
+```json
+{
+  "presets": [["es2015", { "modules": false }]],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "dying-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
+  ]
+}
+```
 
-   VuePress 会在 [http://localhost:8080](http://localhost:8080) 启动一个热重载的开发服务器。
+接下来，如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
 
-现在，你应该已经有了一个简单可用的 VuePress 文档。接下来，了解一下推荐的 [目录结构](directory-structure.html) 和 VuePress 中的 [基本配置](basic-config.html)。
+```javascript
+import Vue from "vue";
+import { DyButton, DyIcon } from "dying-ui";
+import App from "./App.vue";
 
-等你了解完上文介绍的基础概念，再去学习一下如何使用 [静态资源](assets.html)，[Markdown 拓展](markdown.html) 和 [在 Markdown 中使用 Vue](using-vue.html) 来丰富你的文档内容。
+Vue.component(DyButton.name, DyButton);
+Vue.component(DyIcon.name, DyIcon);
+/* 或写为
+ * Vue.use(DyButton)
+ * Vue.use(DyButton)
+ */
 
-当你的文档逐渐成型的时候，不要忘记 VuePress 的 [多语言支持](i18n.html) 并了解一下如何将你的文档 [部署](deploy.html) 到任意静态文件服务器上。
+new Vue({
+  el: "#app",
+  render: (h) => h(App),
+});
+```
+
+完整组件列表和引入方式（完整组件列表以 [components.json](https://github.com/ElemeFE/dying/blob/master/components.json) 为准）
+
+```javascript
+import Vue from "vue";
+import {
+  DyButton,
+  DyIcon,
+  DyButtonGroup,
+  DyCol,
+  DyRow,
+  DyAside,
+  DyContainer,
+  DyFooter,
+  DyHeader,
+  DyMain,
+  DyInput,
+  DyUpload,
+  DyProgress,
+} from "dying-ui";
+Vue.use(DyButton);
+Vue.use(DyIcon);
+Vue.use(DyButtonGroup);
+vue.use(DyCol);
+vue.use(DyRow);
+vue.use(DyAside);
+vue.use(DyContainer);
+vue.use(DyFooter);
+vue.use(DyHeader);
+vue.use(DyMain);
+vue.use(DyInput);
+vue.use(DyUpload);
+vue.use(DyProgress);
+```
+
+### 开始使用
+
+至此，一个基于 Vue 和 dying-ui 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
+

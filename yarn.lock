@@ -1720,7 +1720,7 @@ babel-helper-vue-jsx-merge-props@^2.0.0:
   resolved "https://registry.yarnpkg.com/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-2.0.3.tgz#22aebd3b33902328e513293a8e4992b384f9f1b6"
   integrity sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==
 
-babel-loader@^8.0.4, babel-loader@^8.1.0:
+babel-loader@^8.0.4:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.1.0.tgz#c611d5112bd5209abe8b9fa84c3e4da25275f1c3"
   integrity sha512-7q7nC1tYOrqvUrN3LQK4GwSk/TQorZSOlO9C+RZDZpODgyN4ZlCqE5q9cDsyWOliN+aU9B4JX01xK9eJXowJLw==
@@ -1728,6 +1728,17 @@ babel-loader@^8.0.4, babel-loader@^8.1.0:
     find-cache-dir "^2.1.0"
     loader-utils "^1.4.0"
     mkdirp "^0.5.3"
+    pify "^4.0.1"
+    schema-utils "^2.6.5"
+
+babel-loader@^8.1.0:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.1.tgz#e53313254677e86f27536f5071d807e01d24ec00"
+  integrity sha512-dMF8sb2KQ8kJl21GUjkW1HWmcsL39GOV5vnzjqrCzEPNY0S0UfMLnumidiwIajDSBmKhYf5iRW+HXaM4cvCKBw==
+  dependencies:
+    find-cache-dir "^2.1.0"
+    loader-utils "^1.4.0"
+    make-dir "^2.1.0"
     pify "^4.0.1"
     schema-utils "^2.6.5"
 
@@ -3358,10 +3369,10 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-dying-ui@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/dying-ui/-/dying-ui-0.1.6.tgz#07f6afa691c02330975978b0444ffe537a03fc6e"
-  integrity sha512-rfcSIsRGPfbzt9Ki8X1Q4LbrXBgpC7veOVVqC1nr+J784aouf1GMoI2A6eJ1jxOsrTxJYNtMC6NbMZQ7Yjmonw==
+dying-ui@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/dying-ui/-/dying-ui-0.1.7.tgz#d36f9d13237be155b52a1be7b7dca1454d06ace0"
+  integrity sha512-qbZA0QO9BF/oK2Dx3XdYJtTc6cd5m2ZyP0OUhrmKO9/HIeLc4Ml7fLmrqRELgaTHwkcFAi4RpDNb+TkeuKjwow==
   dependencies:
     "@babel/polyfill" "^7.11.5"
     "@koa/multer" "^3.0.0"
@@ -5629,7 +5640,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-make-dir@^2.0.0:
+make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
   integrity sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==

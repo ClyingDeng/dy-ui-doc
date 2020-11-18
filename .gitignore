@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+.gitlab-ci.yml
+.travis.yml
+deploy.sh

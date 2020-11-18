@@ -1,39 +1,47 @@
-# icon 组件
+# Icon 图标
 
-常用的操作按钮
-<!-- <demo-block>
+提供了一套常用的图标集合。
+
+## 使用方法
+
+<demo-block>
 ::: slot source
-<button-test1></button-test1>
+<icon-test1></icon-test1>
 :::
 
-使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
+直接通过设置类名为 `dy-icon-iconName` 来使用即可。例如：
 
 :::slot highlight
+
 ```html
-<dy-button>默认按钮</dy-button>
-<dy-button type="info">默认按钮</dy-button>
-<dy-button type="success">默认按钮</dy-button>
-<dy-button type="primary">默认按钮</dy-button>
-<dy-button type="warning">默认按钮</dy-button>
+<dy-icon class="dy-icon-edit"></dy-icon>
+<dy-icon class="dy-icon-share"></dy-icon>
+<dy-icon class="dy-icon-delete"></dy-icon>
+<dy-button type="primary" icon="dy-icon-search">搜索</dy-button>
 ```
+
 :::
 </demo-block>
 
+### 图标集合
 
-
-## 禁用状态
-按钮的不可用状态。
 <demo-block>
 ::: slot source
-<button-test2></button-test2>
+<icon-test2></icon-test2>
 :::
-可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
+
 :::slot highlight
+
 ```html
-<dy-button type="info" disabled>禁用按钮</dy-button>
-<dy-button type="success" disabled>禁用按钮</dy-button>
-<dy-button type="primary" disabled>禁用按钮</dy-button>
-<dy-button type="warning" disabled>禁用按钮</dy-button>
+<ul class="icon-list">
+  <li v-for="name in $icon" :key="name">
+    <span>
+      <i :class="'dy-icon-' + name"></i>
+      <span class="icon-name">{{'dy-icon-' + name}}</span>
+    </span>
+  </li>
+</ul>
 ```
+
 :::
-</demo-block> -->
+</demo-block>

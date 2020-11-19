@@ -1,7 +1,6 @@
 module.exports = {
     title: 'dying-ui文档', // 设置网站标题
     description: 'dying-ui组件库', // 描述
-    dest: 'public', // 设置输出目录
     base:'/dy-ui-doc/',
     port: 8888, // 端口
     themeConfig: {   // 主题配置

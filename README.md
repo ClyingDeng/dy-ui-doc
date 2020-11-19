@@ -2,4 +2,4 @@
 
 ## Documentation
 
-Check out Mine docs at https://dying-ui.netlify.app/.
+Check out My docs at https://dying-ui.netlify.app/.

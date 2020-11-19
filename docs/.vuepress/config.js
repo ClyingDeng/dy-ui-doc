@@ -54,7 +54,8 @@ function getComponentSidebar(groupA) {
             children: [
                 '',
                 'button',
-                'icon'
+                'icon',
+                'progress'
             ]
         }
     ]

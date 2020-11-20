@@ -2,6 +2,7 @@ module.exports = {
     title: 'dying-ui文档', // 设置网站标题
     description: 'dying-ui组件库', // 描述
     base:'/dy-ui-doc/',
+    plugins: [ 'dying-ui', 'element-ui' ],
     port: 8888, // 端口
     themeConfig: {   // 主题配置
         // extend: '@vuepress/theme-default',

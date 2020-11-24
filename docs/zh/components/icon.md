@@ -23,14 +23,14 @@
 :::
 </demo-block>
 
-### 图标集合
+## 图标集合
 
-<demo-block>
-::: slot source
+<!-- <demo-block>
+::: slot source -->
 <icon-test2></icon-test2>
-:::
+<!-- ::: -->
 
-:::slot highlight
+<!-- :::slot highlight
 
 ```html
 <ul class="icon-list">
@@ -44,4 +44,4 @@
 ```
 
 :::
-</demo-block>
+</demo-block> -->

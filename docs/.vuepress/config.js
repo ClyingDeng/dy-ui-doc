@@ -52,7 +52,6 @@ function getComponentSidebar(groupA) {
         {
             title: groupA,
             collapsable: false,
-            sidebarDepth: 2,
             children: [
                 '',
                 'button',

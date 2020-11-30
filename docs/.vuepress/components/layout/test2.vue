@@ -9,13 +9,13 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.el-row {
+.dy-row {
   margin-bottom: 20px;
   &:last-child {
     margin-bottom: 0;
   }
 }
-.el-col {
+.dy-col {
   border-radius: 4px;
 }
 .bg-purple-dark {

@@ -1,46 +1,67 @@
 <template>
   <div class="layout-demo1">
+    <el-row>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark"></div>
+      </el-col>
+    </el-row>
     <dy-row>
-      <dy-col :span="24"
-        ><div class="grid-content bg-purple-dark"></div
-      ></dy-col>
+      <dy-col :span="24">
+        <div class="grid-content bg-purple-dark"></div>
+      </dy-col>
     </dy-row>
     <dy-row>
-      <dy-col :span="12"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="12"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="12">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="12">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
     </dy-row>
     <dy-row>
-      <dy-col :span="8"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="8"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
-      <dy-col :span="8"><div class="grid-content bg-purple"></div></dy-col>
+      <dy-col :span="8">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="8">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
+      <dy-col :span="8">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
     </dy-row>
     <dy-row>
-      <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
-      <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
     </dy-row>
     <dy-row>
-      <dy-col :span="4"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="4"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
-      <dy-col :span="4"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="4"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
-      <dy-col :span="4"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="4"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple"></div>
+      </dy-col>
+      <dy-col :span="4">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
     </dy-row>
   </div>
 </template>

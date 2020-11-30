@@ -2,37 +2,37 @@
   <div class="layout-demo5">
     <dy-row type="flex" class="row-bg">
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
     </dy-row>
     <dy-row type="flex" class="row-bg" justify="center">
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
     </dy-row>
     <dy-row type="flex" class="row-bg" justify="end">
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
     </dy-row>
     <dy-row type="flex" class="row-bg" justify="space-between">
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
     </dy-row>
     <dy-row type="flex" class="row-bg" justify="space-around">
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
-      <dy-col :span="6"
-        ><div class="grid-content bg-purple-light"></div
-      ></dy-col>
+      <dy-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </dy-col>
       <dy-col :span="6"><div class="grid-content bg-purple"></div></dy-col>
     </dy-row>
   </div>

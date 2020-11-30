@@ -1,24 +1,22 @@
-// const pluginConf = require('./public/dying-ui.common.js');
 module.exports = {
-    title: 'dying-ui文档', // 设置网站标题
+    title: 'dy-ui-doc', // 设置网站标题
     description: 'dying-ui组件库', // 描述
     base: '/dy-ui-doc/',
-    dest: 'dist',
-    // plugins: [
-    //     ['@vuepress/search', {
-    //         searchMaxSuggestions: 10
-    //     }]
-    // ],
-    // port: 8888, // 端口
+    dest: './build',
+    port: 8888, // 端口
     themeConfig: {   // 主题配置
         // repo: 'vuejs/vuepress',
         docsDir: 'docs',
-        extend: '@vuepress/theme-default',
+        // extend: '@vuepress/theme-default',
         search: false,
         searchMaxSuggestions: 10,
         logo: '/logo.png',
         smoothScroll: true,
         nav: [
+            {
+                text: '主页',
+                link: '/'
+            },
             {
                 text: '指南',
                 link: '/zh/guide/',   // 导航条
@@ -31,7 +29,20 @@ module.exports = {
         ],
         // 为以下路由添加侧边栏
         sidebar: {
-            '/zh/components/': getComponentSidebar('组件'),
+            '/zh/components/': [
+                {
+                    title:'Basic',
+                    collapsable: false,
+                    children:[
+                        '/zh/components/layout',
+                        '/zh/components/button',
+                        '/zh/components/icon',
+                        '/zh/components/progress',
+                    ],
+                    
+                },
+            ],
+            // '/zh/components/': getComponentSidebar('组件'),
             '/zh/guide/': getGuideSidebar('开发指南', '设计原则'),
         }
 

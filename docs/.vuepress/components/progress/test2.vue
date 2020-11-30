@@ -1,12 +1,8 @@
 <template>
   <div class="test2">
     <dy-progress :percentage="percentage" :color="customColor"></dy-progress>
-
-    <dy-progress
-      :percentage="percentage"
-      :color="customColorMethod"
-    ></dy-progress>
-
+    <dy-progress :percentage="percentage" :color="customColorMethod">
+    </dy-progress>
     <dy-progress :percentage="percentage" :color="customColors"></dy-progress>
     <div class="plusmiMinus">
       <dy-button-group>

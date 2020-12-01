@@ -31,7 +31,7 @@ module.exports = {
         sidebar: {
             '/zh/components/': [
                 {
-                    title:'Basic',
+                    title:'基础组件',
                     collapsable: false,
                     children:[
                         '/zh/components/layout',
@@ -42,7 +42,6 @@ module.exports = {
                     
                 },
             ],
-            // '/zh/components/': getComponentSidebar('组件'),
             '/zh/guide/': getGuideSidebar('开发指南', '设计原则'),
         }
 

@@ -1,10 +1,10 @@
 <template>
   <div class="layout-demo1">
-    <el-row>
+    <!-- <el-row>
       <el-col :span="24">
         <div class="grid-content bg-purple-dark"></div>
       </el-col>
-    </el-row>
+    </el-row> -->
     <dy-row>
       <dy-col :span="24">
         <div class="grid-content bg-purple-dark"></div>

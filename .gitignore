@@ -2,9 +2,9 @@
 node_modules
 deploy.sh
 .travis.yml
-dist
+# dist
 # build
-docs/.vuepress/dist
+# docs/.vuepress/dist
 
 # local env files
 .env.local

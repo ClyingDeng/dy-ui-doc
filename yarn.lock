@@ -3388,10 +3388,10 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-dying-ui@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/dying-ui/-/dying-ui-0.2.5.tgz#3fe31046772f25d7ff25b2a33fe701e768b8b20d"
-  integrity sha512-EXybNKWdQTQwUx4vWw/vDVZ7uqxLU7LPPLqdx0Q6ut4Gn65eCfOqKMbRE/H1ir38BCTqinWwdv5IsB2VVCKMTQ==
+dying-ui@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/dying-ui/-/dying-ui-0.2.6.tgz#566a32f8553b204cdac2b9afd6123578f1f54db9"
+  integrity sha512-bsM5X+zexRxi169b88t62zH4bNRRto2wMHyHXFXDo5a1QpskO4xvv6PgoPI5NQI2AJiJQlNr7EEaQFptqYRynA==
   dependencies:
     "@babel/polyfill" "^7.11.5"
     "@koa/multer" "^3.0.0"

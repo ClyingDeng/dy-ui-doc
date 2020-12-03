@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "2",
-    "dying-ui": "^0.2.5",
+    "dying-ui": "^0.2.6",
     "element-ui": "^2.14.1",
     "highlight.js": "^10.2.0",
     "node-sass": "^4.14.1",

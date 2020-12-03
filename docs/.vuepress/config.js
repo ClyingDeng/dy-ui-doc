@@ -29,19 +29,20 @@ module.exports = {
         ],
         // 为以下路由添加侧边栏
         sidebar: {
-            '/zh/components/': [
-                {
-                    title:'基础组件',
-                    collapsable: false,
-                    children:[
-                        '/zh/components/layout',
-                        '/zh/components/button',
-                        '/zh/components/icon',
-                        '/zh/components/progress',
-                    ],
+            // '/zh/components/': [
+            //     {
+            //         title:'基础组件',
+            //         collapsable: false,
+            //         children:[
+            //             '/zh/components/layout',
+            //             '/zh/components/button',
+            //             '/zh/components/icon',
+            //             '/zh/components/progress',
+            //         ],
                     
-                },
-            ],
+            //     },
+            // ],
+            '/zh/components/': getComponentSidebar('组件'),
             '/zh/guide/': getGuideSidebar('开发指南', '设计原则'),
         }
 
@@ -75,7 +76,8 @@ function getComponentSidebar(groupA) {
                 '',
                 'button',
                 'icon',
-                'progress'
+                'progress',
+                'upload'
             ]
         }
     ]

@@ -95,6 +95,7 @@ import {
   DyInput,
   DyUpload,
   DyProgress,
+  DyPopover,
 } from "dying-ui";
 Vue.use(DyButton);
 Vue.use(DyIcon);
@@ -109,6 +110,7 @@ vue.use(DyMain);
 vue.use(DyInput);
 vue.use(DyUpload);
 vue.use(DyProgress);
+vue.use(DyPopover);
 ```
 
 ### 开始使用

@@ -77,7 +77,13 @@ function getComponentSidebar(groupA) {
                 'button',
                 'icon',
                 'progress',
-                'upload'
+                'upload',
+                'popover',
+                'datePicker',
+                'carousel',
+                'table',
+                'pagination',
+                // 'infiniteScroll'
             ]
         }
     ]

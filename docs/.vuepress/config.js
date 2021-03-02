@@ -74,6 +74,7 @@ function getComponentSidebar(groupA) {
             collapsable: false,
             children: [
                 '',
+                'container',
                 'button',
                 'icon',
                 'progress',
@@ -83,7 +84,7 @@ function getComponentSidebar(groupA) {
                 'carousel',
                 'table',
                 'pagination',
-                // 'infiniteScroll'
+                'infiniteScroll'
             ]
         }
     ]

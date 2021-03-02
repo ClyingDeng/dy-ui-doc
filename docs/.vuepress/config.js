@@ -74,10 +74,17 @@ function getComponentSidebar(groupA) {
             collapsable: false,
             children: [
                 '',
+                'container',
                 'button',
                 'icon',
                 'progress',
-                'upload'
+                'upload',
+                'popover',
+                'datePicker',
+                'carousel',
+                'table',
+                'pagination',
+                'infiniteScroll'
             ]
         }
     ]

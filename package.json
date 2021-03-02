@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "2",
+    "dying-ui": "^0.3.0",
     "highlight.js": "^10.2.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.2"

@@ -3,9 +3,6 @@
     <dy-table
       :columns="columns1"
       :data="data1"
-      @on-select="select"
-      @on-select-all="selectAll"
-      @on-sort-change="sortChange"
       height="150px"
     >
     </dy-table>

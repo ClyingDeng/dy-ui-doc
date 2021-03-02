@@ -5,7 +5,7 @@
         <h1>{{ row[col.key] }}</h1>
       </template>
       <template slot="action" slot-scope="{ row, col }">
-        <dy-button type="text">删除</dy-button>
+        <dy-button type="primary" plain>删除</dy-button>
       </template>
     </dy-table>
   </div>
@@ -30,6 +30,11 @@ export default {
         {
           title: "Address",
           key: "address",
+        },
+        {
+          title: "operator",
+          slot: "action",
+          key: "operator",
         },
       ],
       data1: [

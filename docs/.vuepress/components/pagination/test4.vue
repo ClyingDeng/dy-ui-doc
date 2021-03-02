@@ -1,0 +1,17 @@
+<template>
+  <div>
+    <dy-pagination
+      :page-size="10"
+      :pager-count="5"
+      :total="10"
+      disabled
+    ></dy-pagination>
+    <dy-pagination
+      :page-size="10"
+      :pager-count="5"
+      :total="10"
+      background
+      disabled
+    ></dy-pagination>
+  </div>
+</template>

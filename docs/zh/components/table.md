@@ -245,6 +245,7 @@
 </demo-block>
 
 ## 固定表头
+
 在 `columns` 的某列声明 slot 后，就可以在 `Table` 的 `slot` 中使用 `slot-scope`。
 
 `slot-scope` 的参数有 3 个：当前行数据 row，当前列数据 column，当前行序号 index。
@@ -254,89 +255,73 @@
 <table-test4></table-test4>
 :::
 
-
 :::slot highlight
 
 ```html
-<dy-table
-      :columns="columns1"
-      :data="data1"
-      @on-select="select"
-      @on-select-all="selectAll"
-      @on-sort-change="sortChange"
-      height="150px"
-    >
-      <template slot="name" slot-scope="{ row, col }">
-        <h1>{{ row[col.key] }}</h1>
-      </template>
-      <template slot="action" slot-scope="{ row, col }">
-        <dy-button type="text">删除</dy-button>
-      </template>
-    </dy-table>
-    <script scoped>
-export default {
-  data() {
-    return {
-      columns1: [
-        {
-          title: "Date",
-          key: "date",
-        },
-        {
-          title: "Name",
-          key: "name",
-        },
-        {
-          title: "Age",
-          key: "age",
-          sortable: true,
-        },
-        {
-          title: "Address",
-          key: "address",
-        },
-      ],
-      data1: [
-        {
-          name: "John Brown",
-          age: 18,
-          address: "New York No. 1 Lake Park",
-          date: "2016-10-03",
-        },
-        {
-          name: "Jim Green",
-          age: 24,
-          address: "London No. 1 Lake Park",
-          date: "2016-10-01",
-        },
-        {
-          name: "Joe Black",
-          age: 30,
-          address: "Sydney No. 1 Lake Park",
-          date: "2016-10-02",
-        },
-        {
-          name: "Jon Snow",
-          age: 26,
-          address: "Ottawa No. 2 Lake Park",
-          date: "2016-10-04",
-        },
-      ],
-    };
-  },
-  methods: {
-    select(selection, row) {
-      // selection 表示选中的所有的 row表示当前是哪一行
-      console.log(selection, row);
+<dy-table :columns="columns1" :data="data1" height="150px"> </dy-table>
+<script scoped>
+  export default {
+    data() {
+      return {
+        columns1: [
+          {
+            title: "Date",
+            key: "date",
+          },
+          {
+            title: "Name",
+            key: "name",
+          },
+          {
+            title: "Age",
+            key: "age",
+          },
+          {
+            title: "Address",
+            key: "address",
+          },
+        ],
+        data1: [
+          {
+            name: "John Brown",
+            age: 18,
+            address: "New York No. 1 Lake Park",
+            date: "2016-10-03",
+          },
+          {
+            name: "Jim Green",
+            age: 24,
+            address: "London No. 1 Lake Park",
+            date: "2016-10-01",
+          },
+          {
+            name: "Joe Black",
+            age: 30,
+            address: "Sydney No. 1 Lake Park",
+            date: "2016-10-02",
+          },
+          {
+            name: "Jon Snow",
+            age: 26,
+            address: "Ottawa No. 2 Lake Park",
+            date: "2016-10-04",
+          },
+        ],
+      };
     },
-    selectAll(selection) {
-      console.log(selection);
+    methods: {
+      select(selection, row) {
+        // selection 表示选中的所有的 row表示当前是哪一行
+        console.log(selection, row);
+      },
+      selectAll(selection) {
+        console.log(selection);
+      },
+      sortChange(col, type) {
+        console.log(col, type);
+      },
     },
-    sortChange(col, type) {
-      console.log(col, type);
-    },
-  },
-};
+  };
 </script>
 ```
 
@@ -344,6 +329,7 @@ export default {
 </demo-block>
 
 ## 自定义列模板
+
 在 `columns` 的某列声明 slot 后，就可以在 `Table` 的 `slot` 中使用 `slot-scope`。
 
 `slot-scope` 的参数有 3 个：当前行数据 row，当前列数据 column，当前行序号 index。
@@ -353,89 +339,73 @@ export default {
 <table-test5></table-test5>
 :::
 
-
 :::slot highlight
 
 ```html
-<dy-table
-      :columns="columns1"
-      :data="data1"
-      @on-select="select"
-      @on-select-all="selectAll"
-      @on-sort-change="sortChange"
-      height="150px"
-    >
-      <template slot="name" slot-scope="{ row, col }">
-        <h1>{{ row[col.key] }}</h1>
-      </template>
-      <template slot="action" slot-scope="{ row, col }">
-        <dy-button type="text">删除</dy-button>
-      </template>
-    </dy-table>
-    <script scoped>
-export default {
-  data() {
-    return {
-      columns1: [
-        {
-          title: "Date",
-          key: "date",
-        },
-        {
-          title: "Name",
-          key: "name",
-        },
-        {
-          title: "Age",
-          key: "age",
-          sortable: true,
-        },
-        {
-          title: "Address",
-          key: "address",
-        },
-      ],
-      data1: [
-        {
-          name: "John Brown",
-          age: 18,
-          address: "New York No. 1 Lake Park",
-          date: "2016-10-03",
-        },
-        {
-          name: "Jim Green",
-          age: 24,
-          address: "London No. 1 Lake Park",
-          date: "2016-10-01",
-        },
-        {
-          name: "Joe Black",
-          age: 30,
-          address: "Sydney No. 1 Lake Park",
-          date: "2016-10-02",
-        },
-        {
-          name: "Jon Snow",
-          age: 26,
-          address: "Ottawa No. 2 Lake Park",
-          date: "2016-10-04",
-        },
-      ],
-    };
-  },
-  methods: {
-    select(selection, row) {
-      // selection 表示选中的所有的 row表示当前是哪一行
-      console.log(selection, row);
+<dy-table :columns="columns1" :data="data1">
+  <template slot="name" slot-scope="{ row, col }">
+    <h1>{{ row[col.key] }}</h1>
+  </template>
+  <template slot="action" slot-scope="{ row, col }">
+    <dy-button type="primary" plain>删除</dy-button>
+  </template>
+</dy-table>
+<script scoped>
+  export default {
+    data() {
+      return {
+        columns1: [
+          {
+            title: "Date",
+            key: "date",
+          },
+          {
+            title: "Name",
+            key: "name",
+          },
+          {
+            title: "Age",
+            key: "age",
+          },
+          {
+            title: "Address",
+            key: "address",
+          },
+          {
+            title: "operator",
+            slot: "action",
+            key: "operator",
+          },
+        ],
+        data1: [
+          {
+            name: "John Brown",
+            age: 18,
+            address: "New York No. 1 Lake Park",
+            date: "2016-10-03",
+          },
+          {
+            name: "Jim Green",
+            age: 24,
+            address: "London No. 1 Lake Park",
+            date: "2016-10-01",
+          },
+          {
+            name: "Joe Black",
+            age: 30,
+            address: "Sydney No. 1 Lake Park",
+            date: "2016-10-02",
+          },
+          {
+            name: "Jon Snow",
+            age: 26,
+            address: "Ottawa No. 2 Lake Park",
+            date: "2016-10-04",
+          },
+        ],
+      };
     },
-    selectAll(selection) {
-      console.log(selection);
-    },
-    sortChange(col, type) {
-      console.log(col, type);
-    },
-  },
-};
+  };
 </script>
 ```
 

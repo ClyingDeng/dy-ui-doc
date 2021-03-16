@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'dy-ui-doc', // 设置网站标题
+    title: 'dying-ui', // 设置网站标题
     description: 'dying-ui组件库', // 描述
     // base: '/',
     // dest: './build',
